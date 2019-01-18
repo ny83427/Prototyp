@@ -27,14 +27,13 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
+import java.util.Hashtable;
 
 import javax.imageio.ImageIO;
 
 import org.lwjgl.opengl.GL11;
 
 import rtype.entity.IEntity;
-
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
 
 public class WorkAroundTextureLoader implements ITextureLoader 
 {

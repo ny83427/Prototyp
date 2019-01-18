@@ -21,20 +21,11 @@
 
 package rtype;
 
-import generator.EnemyWave;
-import generator.GeneratorSet;
-import generator.HomingMissileGenerator;
-import generator.IGenerator;
-import generator.IntroGenerator;
-import generator.LadyBirdGenerator;
-import generator.StarGenerator;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import org.lwjgl.Sys;
 //import org.lwjgl.devil.IL;
@@ -48,17 +39,18 @@ import org.lwjgl.util.Timer;
 import org.lwjgl.util.glu.GLU;
 import org.lwjgl.util.vector.Vector2f;
 
+import generator.EnemyWave;
+import generator.GeneratorSet;
+import generator.HomingMissileGenerator;
+import generator.IGenerator;
+import generator.IntroGenerator;
+import generator.LadyBirdGenerator;
+import generator.StarGenerator;
 import rtype.entity.Bonus;
 import rtype.entity.Entity;
-import rtype.entity.Explosion;
-import rtype.entity.HomingMissile;
-import rtype.entity.Text;
 import rtype.entity.IEntity;
-import rtype.entity.LadyBird;
-import rtype.entity.Planet;
 import rtype.entity.PlayerShip;
-import rtype.entity.SpaceTrash;
-import rtype.entity.Star;
+import rtype.entity.Text;
 import rtype.entity.TextEntityCounter;
 /* TODO 
  	- Fix texture loading, DEVil is not yet usable with OS X or Linux platform
@@ -672,7 +664,7 @@ private void createWindow(int screenWidth, int screenHeight, boolean fullscreen)
 			GL11.glVertex2f(0 + player1.power*10/4 ,0 );
 			GL11.glVertex2f(0 + player1.power*10/4 ,0 -100 );
 		GL11.glEnd();
-		GL11.glEnable(GL11.GL_TEXTURE_2D);                     
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		GL11.glColor4f(1,1,1,1f);
 	}
 

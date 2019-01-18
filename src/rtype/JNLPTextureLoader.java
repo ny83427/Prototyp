@@ -23,27 +23,20 @@ package rtype;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
-import java.awt.image.Raster;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Set;
 
 import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
 
 //import org.lwjgl.devil.IL;
 import org.lwjgl.opengl.GL11;
 
 import rtype.entity.IEntity;
-import rtype.entity.Logger;
 
 
 public class JNLPTextureLoader implements ITextureLoader 
@@ -142,7 +135,7 @@ public class JNLPTextureLoader implements ITextureLoader
 		return animations[animationID];
 	}
 	
-	Hashtable imageCache = new Hashtable();
+	Hashtable<String, BufferedImage> imageCache = new Hashtable<>();
 	
 	// Offset are in term off pixel, not byte, the image loader figure out alone what is the bytesPerPixel
 	private  Texture loadTexture(String path,int xOffSet, int yOffSet, int textWidth, int textHeight) {
